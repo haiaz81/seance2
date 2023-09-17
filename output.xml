@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230916 21:03:13.382" rpa="false" schemaversion="4">
+<suite id="s1" name="Loginhrm" source="c:\Users\Admin\Desktop\Formation SQL\Session 3\TECHNIQUES D'AUTOMATISATION DE TESTS I\cours 2 14-09-2023\Séance2\loginhrm.robot">
+<test id="s1-t1" name="tc01 login test" line="10">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230916 21:03:13.592" level="INFO">Opening browser 'edge' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20230916 21:03:13.592" endtime="20230916 21:03:17.297"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230916 21:03:17.297" endtime="20230916 21:03:17.419"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230916 21:03:19.419" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230916 21:03:17.419" endtime="20230916 21:03:19.419"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230916 21:03:19.419" level="INFO">Typing text 'Admin' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20230916 21:03:19.419" endtime="20230916 21:03:19.483"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230916 21:03:19.483" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg timestamp="20230916 21:03:19.545" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230916 21:03:19.648" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230916 21:03:19.483" endtime="20230916 21:03:19.648"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class:oxd-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230916 21:03:19.651" level="INFO">Clicking button 'class:oxd-button'.</msg>
+<status status="PASS" starttime="20230916 21:03:19.650" endtime="20230916 21:03:20.706"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230916 21:03:22.706" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230916 21:03:20.706" endtime="20230916 21:03:22.708"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id="app"]/div[1]/div[1]/header/div[1]/div[1]/span/h6</arg>
+<arg>Dashboard</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230916 21:03:22.709" level="INFO">Verifying element 'xpath://*[@id="app"]/div[1]/div[1]/header/div[1]/div[1]/span/h6' contains exact text 'Dashboard'.</msg>
+<status status="PASS" starttime="20230916 21:03:22.709" endtime="20230916 21:03:22.741"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://p[@class="oxd-userdropdown-name"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230916 21:03:22.741" level="INFO">Clicking element 'xpath://p[@class="oxd-userdropdown-name"]'.</msg>
+<status status="PASS" starttime="20230916 21:03:22.741" endtime="20230916 21:03:22.797"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230916 21:03:25.805" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230916 21:03:22.805" endtime="20230916 21:03:25.805"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Link:Logout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230916 21:03:25.805" level="INFO">Clicking element 'Link:Logout'.</msg>
+<status status="PASS" starttime="20230916 21:03:25.805" endtime="20230916 21:03:26.423"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230916 21:03:29.425" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230916 21:03:26.424" endtime="20230916 21:03:29.425"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>class:oxd-button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230916 21:03:29.547" level="INFO">Element 'class:oxd-button' is displayed.</msg>
+<status status="PASS" starttime="20230916 21:03:29.425" endtime="20230916 21:03:29.547"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230916 21:03:29.547" endtime="20230916 21:03:31.946"/>
+</kw>
+<status status="PASS" starttime="20230916 21:03:13.577" endtime="20230916 21:03:31.946"/>
+</test>
+<status status="PASS" starttime="20230916 21:03:13.390" endtime="20230916 21:03:31.951"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Loginhrm">Loginhrm</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
